@@ -2,7 +2,6 @@ import React from 'react';
  
 
 export const NavBar = (props)=>{
-    const items = ["Home", "Portfolio", "About"]
     return (
         <table className="nav">
             <tbody>
