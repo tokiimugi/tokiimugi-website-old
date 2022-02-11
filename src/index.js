@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { NavBar } from './components/NavBar';
+import { Blog } from './components/Blog';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 
 function Square(props) {
@@ -138,7 +142,34 @@ function calculateWinner(squares) {
 
 // ========================================
 
+const items = {
+    Home: <Blog/>,
+    Portfolio: <p>test</p>,
+    About: <Game/>,
+}
+
+const Root = (props) => {
+
+    return (
+        <BrowserRouter>
+            <div>
+                <Routes>
+                    {Object.keys(props.items).map((ele, val) => {
+                        return (
+                            <Route key={val} path={val ? "/" + ele.toLowerCase() : '/'} element={items[ele]} />
+                        )
+                    })}
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
+}
+
+
 ReactDOM.render(
-    <Game />,
-    document.getElementById('root')
+    <NavBar items={items} />,
+    document.getElementById('nav')
 );
+ReactDOM.render(<Root items={items}/>, document.getElementById('root'))
+
+
