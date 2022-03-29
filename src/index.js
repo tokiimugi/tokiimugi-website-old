@@ -32,6 +32,9 @@ const Send = ()=>{
             test: test
         })
     }
+    return(
+        <button className="main" onClick={handleButton}>test</button>
+    )
 }
 
 // ========================================
