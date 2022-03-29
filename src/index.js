@@ -41,7 +41,7 @@ const Send = ()=>{
 
 const items = {
     Home: <Blog/>,
-    Portfolio: <p>test</p>,
+    Portfolio: <p className="main">test</p>,
     About: <Send/>,
 }
 
