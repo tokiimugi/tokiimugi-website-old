@@ -1,7 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "homepage": "https://tokiimugi.github.io",
+  "short_name": "Tokiimugi",
+  "name": "Tokiimugi",
   "icons": [
     {
       "src": "favicon.ico",
