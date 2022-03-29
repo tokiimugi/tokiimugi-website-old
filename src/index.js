@@ -40,9 +40,9 @@ const Send = ()=>{
 // ========================================
 
 const items = {
-    Home: <Blog/>,
+    Home: <Send/>,
     Portfolio: <p className="main">test</p>,
-    About: <Send/>,
+    About: <Blog/>,
 }
 
 const Root = (props) => {
