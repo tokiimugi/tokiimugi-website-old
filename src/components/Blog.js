@@ -1,14 +1,28 @@
 import React, {useState} from "react";
+import { ref, update, get, child } from "firebase/database";
 
 
-export function Blog(){
+export function Blog(props){
     const [post, setPost] = useState("");
-    const [allPosts, setPosts] = useState([]);
+    const [allPosts, setAllPosts] = useState([]);
+
+    get(child(ref(props.data), 'tokiimugi')).then((snapshot) => {
+        if (snapshot.exists()) {
+            setAllPosts(snapshot.val().content)
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+
 
     const submit = ()=>{
-        setPosts((prev)=>{
+        setAllPosts((prev)=>{  
+            update(ref(props.data, 'tokiimugi'),{
+                content: [ post, ...prev]
+            })
             return [ post, ...prev]
         })
+
         setPost("");
     }
 

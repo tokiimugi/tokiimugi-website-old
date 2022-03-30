@@ -1,6 +1,7 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    width:800px;
+    margin: 0 auto;
   }
   
   ol, ul {
@@ -31,10 +32,10 @@ body {
 
 
   .post{
-      background-color: #ffa500;
+      background-color: #ffb937;
     width:100%;
     height: auto;
-    resize:none;
+    resize:vertical
   }
   .main{
       margin-top: 100px;

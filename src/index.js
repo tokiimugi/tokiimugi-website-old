@@ -28,8 +28,8 @@ const database = getDatabase(app);
 
 const Send = ()=>{
     function handleButton(){
-        set(ref(database, 'test'),{
-            test: test
+        set(ref(database, 'test1'),{
+            test3: "test2"
         })
     }
     return(
@@ -40,9 +40,9 @@ const Send = ()=>{
 // ========================================
 
 const items = {
-    Home: <Send/>,
+    Home: <Blog data={database}/>,
     Portfolio: <p className="main">test</p>,
-    About: <Blog/>,
+    About: <Send/>,
 }
 
 const Root = (props) => {
